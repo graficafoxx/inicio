@@ -18,15 +18,41 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
         with:
           node-version: 20
-      - run: npm ci || npm i
-      - run: npm run build
-      - uses: actions/upload-pages-artifact@v3
+          cache: 'npm'
+
+      - name: Install deps
+        run: npm ci || npm i
+
+      - name: Print npm & vite versions
+        run: |
+          node -v
+          npm -v
+          npx vite --version || echo "vite via npx indisponível (ok)"
+
+      - name: Build Vite
+        run: npm run build
+
+      - name: List dist (debug)
+        run: |
+          echo "Conteúdo da pasta dist:"
+          ls -la dist || true
+          echo "Árvore dist:"
+          tree -a dist || true
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact (dist)
+        uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist   # <- envia a pasta buildada do Vite
+          path: ./dist   # <- TEM que ser a pasta gerada pelo vite
 
   deploy:
     needs: build
@@ -35,5 +61,6 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - id: deployment
+      - name: Deploy to GitHub Pages
+        id: deployment
         uses: actions/deploy-pages@v4
