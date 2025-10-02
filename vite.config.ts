@@ -1,4 +1,4 @@
 export default defineConfig({
-  base: "/inicio/",
+  base: "/inicio/",   // não "./"
   plugins: [react()],
 })
