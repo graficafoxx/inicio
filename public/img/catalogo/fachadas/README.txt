@@ -1,0 +1,1 @@
+Coloque aqui as imagens da categoria fachadas. Use o id do produto como nome do arquivo, ex.: fachadas/meu-produto.webp

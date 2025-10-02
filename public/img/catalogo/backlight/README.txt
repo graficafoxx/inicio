@@ -1,0 +1,1 @@
+Coloque aqui as imagens da categoria backlight. Use o id do produto como nome do arquivo, ex.: backlight/meu-produto.webp

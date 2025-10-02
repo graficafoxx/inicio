@@ -1,0 +1,1 @@
+Coloque aqui as imagens da categoria banners. Use o id do produto como nome do arquivo, ex.: banners/meu-produto.webp

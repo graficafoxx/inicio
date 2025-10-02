@@ -1,0 +1,1 @@
+Coloque aqui as imagens da categoria cartoes. Use o id do produto como nome do arquivo, ex.: cartoes/meu-produto.webp

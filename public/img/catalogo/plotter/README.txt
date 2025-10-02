@@ -1,0 +1,1 @@
+Coloque aqui as imagens da categoria plotter. Use o id do produto como nome do arquivo, ex.: plotter/meu-produto.webp

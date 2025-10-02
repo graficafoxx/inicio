@@ -1,0 +1,1 @@
+Use a convenção: public/img/catalogo/<categoria>/<id>.webp|jpg|png  (prefira .webp).

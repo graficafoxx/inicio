@@ -1,0 +1,1 @@
+Coloque aqui as imagens da categoria outros. Use o id do produto como nome do arquivo, ex.: outros/meu-produto.webp

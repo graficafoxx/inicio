@@ -1,0 +1,1 @@
+Coloque aqui as imagens da categoria acm. Use o id do produto como nome do arquivo, ex.: acm/meu-produto.webp
