@@ -1,10 +1,15 @@
-
 import React from 'react'
-import ReactDOM from 'react-dom/client'
-import './index.css'
-import SiteGraficaParauapebas from './App'
-ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
-    <SiteGraficaParauapebas />
-  </React.StrictMode>
+import { createRoot } from 'react-dom/client'
+import { BrowserRouter } from 'react-router-dom'
+import App from './App'
+
+// estilos do Swiper (importe só os que usa)
+import 'swiper/css'
+import 'swiper/css/navigation'
+import 'swiper/css/pagination'
+
+createRoot(document.getElementById('root')!).render(
+  <BrowserRouter basename="/inicio">
+    <App />
+  </BrowserRouter>
 )
